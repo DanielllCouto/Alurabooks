@@ -1,0 +1,154 @@
+.menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/Menu\ \(1\).svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.cabeçalho{
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.botao-menu:checked~.rotulo-cont>.menu-hamburguer {
+    background-image: url("../img/Menu\ Aberto.svg");
+   
+}
+.botao-menu:checked~.rotulo-cont {
+    background: var(--azul-degrade);
+}
+
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.img-cab{
+    padding: 1em;
+
+}
+.listamenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+.menutitulo, .menuitem{
+    padding: 1em;
+    background-color: var(--branco);
+
+}
+
+.menutitulo {
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.menulink{
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+.botao-menu:checked~.listamenu{
+    display: block;
+}
+
+.botao-menu {
+    display: none;
+}
+
+.container-titulo , .opcoes  {
+    display: none;
+}
+
+.texto-cont {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .container-titulo {
+        font-size: 30px;
+        font-weight: 400;
+        display: block;
+    }
+    .negrito{
+        font-weight: 700;
+
+    }
+
+    .opcoes{
+        display: flex;
+
+    }
+
+    .op-item {
+        padding: 0 1em;
+        text-transform: uppercase;
+    }
+    
+    .op-link {
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .img-trasp, .menu-hamburguer{
+        display: none;
+    }
+
+    .op-botao:checked~.listamenu{
+        display: block;
+        width: auto;
+    }
+    .op-botao {
+        display: none;
+    }
+
+    .op-botao:checked~.op-rotulo>.op-item {
+        background: var(--azul-degrade);
+        color: var(--branco);
+    }
+
+    .op-item {
+        padding: 1em 2em;
+    }
+
+    .menuitem:hover {
+        background: var(--azul-degrade);
+    }
+    .menuitem:hover>.menulink{
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;
+    }
+
+}
+
+@media screen and (min-width: 1728px){
+    .link-cont{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);
+
+    }
+
+    .texto-cont {
+        display: block;
+    }
+
+    .cabeçalho{
+        padding: 0.2em;
+    }
+
+    .opcoes {
+        margin-right: auto;
+    }
+}
